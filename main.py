@@ -135,20 +135,21 @@ while True:
     pg.display.flip()
     clock.tick(60)
 
-    average = 0
-    average2 = 0
-    average3 = 0
+    average_speed = 0
+    average_health = 0
+    average_age = 0
     length = 0
     ages_new = []
     for i in animals_group:
-        average += i.speed
-        average2 += i.health
+        average_speed += i.speed
+        average_health += i.health
         if i.speed != 0:
-            average3 += i.age
+            average_age += i.age
             length += 1
         ages_new.append(i.age)
     ages.append(ages_new)
-    average /= len(animals_group)
-    average2 /= len(animals_group)
-    average3 /= length
-    print(f'{len(animals_group)} {round(average, 3)} {round(average2, 3)} {round(average3, 3)} {len(animals_group) + len(food_group)}')
+    average_speed /= len(animals_group)
+    average_health /= len(animals_group)
+    average_age /= length
+    n_entities = len(animals_group) + len(food_group)
+    print(f'{len(animals_group)} {round(average_speed, 3)} {round(average_health, 3)} {round(average_age, 3)} {n_entities}')
