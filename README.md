@@ -1,1 +1,3 @@
 # VisEvo
+
+a visual evolution project. There are 'animals' which are pixels that move in a random direction each frame. The amount that they move is based on their speed. If they eat food, their health goes up to max and another one spawns with a slightly different colour and speed, the only 2 variables that ever get mutated. Each frame, their health goes down by speed, so the faster they are the quicker they'll die. When an animal dies, a food pellet is formed in its place. Feel free to mess around with the number of starting pellets, evolving colour or the blue highlight which I disabled or anything else
